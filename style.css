@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  /* Main HTML CSS */
+  background: #eeeeee;
+  color: black;
+}
+
+* {
+  /* Makes sure all default elements have a font and aligned center */
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+/* 
+Above are some default CSS that is supposed to apply for every page.
+Below are the CSS defined for various pages.
+*/
+
+nav {
+  /* The navigation bar itself */
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #0d6efd;
+}
+
+nav a {
+  /* li is the list, and a is the buttons. */
+  float: right;
+  padding: 14px 16px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover, .page-selected {
+  /* .page-selected is used to make a button have the hover css but its when they are on the page
+  Example: if you are at the contact me page, you will see the contact me button with the hover css */
+  /* CSS that applies when button is hovered */
+  transition: 500ms;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 16px 18px;
+  border-radius: 12px;
+  filter: invert(1);
+  text-shadow: 0px 0px 25px black;
+}
+
+nav a:focus {
+  /* CSS when the button is focused, like clicked */
+  display: none;
+}
+
+br {
+  /* Break Tag, makes it unselectable */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+header {
+  /* The Header, aka the one with "Cybersecurity" on it */
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  background-image: url("header_img/default.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header h1 {
+  font-size: 6em;
+}
+
+#icon {
+  padding: 5px 5px;
+}
+
+.link { 
+  /* Original a tag, without it looking like a button. */
+  text-decoration: underline;
+  color: blue;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+a { 
+  /* Gets all other a tags except the navigation bar */
+  transition: 0.5s;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 0px 12px;
+  background-color: #0d6efd;
+}
+
+a:hover {
+  /* Gets all other a tags except the navigation bar */
+  transform: translateY(10px);
+  transform: scale(1.1);
+  transition: 0.5s;
+  padding: 24px 32px;
+  font-weight: bold;
+}
+
+a:focus {
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+}
+
+main div img {
+  /* Get all imgs inside certain divs*/
+  height: 200px;
+  width: 300px;
+  border-radius: 12px;
+}
+
+main .antivinfo img {
+  /* Get only imgs inside the antivirus info div */
+  height: 100px;
+  width: 100px;
+}
+
+p {
+  /* Makes the paragraphs not stretch out, and make them much closer */
+  margin: 0px 500px;
+}
+
+code {
+  /* This is used for the Password Generator part. */
+  font-family: monospace;
+  font-size: 200%;
+  background-color: #777777;
+  border-radius: 6px;
+  border: 5px solid #777777;
+  color: white;
+  margin: 0px auto;
+}
+
+button {
+  /* This is used to style the button that you click to generate a password. */
+  transition: 0.5s;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 0px 12px;
+  border: none;
+  background-color: #0d6efd;
+}
+
+button:hover {
+  /* Style will apply when the button is hovered. */
+  transition: 0.5s;
+  transform: translateY(10px);
+  transform: scale(1.1);
+  transition: 0.5s;
+  padding: 24px 32px;
+  font-weight: bold;
+}
+
+th,td {
+  /* Get the table row & table data */
+  padding: 5px;
+} 
+
+tr:nth-child(even) {
+  /* Makes the table look in a pattern of white and grey. */
+  background-color: #dddddd;
+}
+
+table,th,td {
+  /* CSS that applies for table, table row & table data */
+  margin: 0 auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.card-container {
+  display: flex; 
+  justify-content: space-around;
+  margin: 0px 50px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 250px;
+  height: 400px;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 275px;
+  height: 440px;
+}
+
+.card img {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: right;
+}
+
+.card p {
+  margin: 0px 0px;
+}
+
+/*
+Above is just some CSS used normally
+Below is the CSS used for responsive design
+*/
+
+@media screen and (max-width: 1200px) {
+  p {
+    margin: 0px 0px;
+  }
+
+  header>h1 {
+    font-size: 50px;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
