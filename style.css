@@ -137,7 +137,7 @@ p {
 }
 
 code {
-  /* This is used for the Password Generator part. */
+  /* This is used for stuff like Password Generator, and the email info */
   font-family: monospace;
   font-size: 200%;
   background-color: #777777;
