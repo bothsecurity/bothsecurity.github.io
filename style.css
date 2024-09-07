@@ -252,6 +252,7 @@ Below is the CSS used for responsive design
 
   .adiv {
     display: flex; 
+    align-content: space-between;
   }
 
 }
