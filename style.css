@@ -80,6 +80,7 @@ header h1 {
 
 #icon {
   padding: 5px 5px;
+  float: left;
 }
 
 .link { 
@@ -236,6 +237,21 @@ Below is the CSS used for responsive design
 
   .card-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1;
   }
+}
+
+@media screen and (max-width: 350px) {
+  header>h1 {
+    font-size: 35px;
+  }
+
+  #icon {
+    float: none;
+  }
+
+  .adiv {
+    display: flex; 
+  }
+
 }
