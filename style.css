@@ -135,6 +135,7 @@ main .antivinfo img {
 p {
   /* Makes the paragraphs not stretch out, and make them much closer */
   margin: 0px 500px;
+  font-size: 1.3em;
 }
 
 code {
@@ -219,6 +220,7 @@ table,th,td {
 
 .card p {
   margin: 0px 0px;
+  font-size: 1em;
 }
 
 /*
