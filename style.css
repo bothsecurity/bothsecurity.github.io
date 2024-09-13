@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+:root {
+  --bg-color: #eee;
+}
+
 html {
   /* Main HTML CSS */
-  background: #eeeeee;
+  background: var(--bg-color);
   color: black;
 }
 
@@ -142,9 +146,9 @@ code {
   /* This is used for stuff like Password Generator, and the email info */
   font-family: monospace;
   font-size: 200%;
-  background-color: #777777;
+  background-color: #777;
   border-radius: 6px;
-  border: 5px solid #777777;
+  border: 5px solid #777;
   color: white;
   margin: 0px auto;
 }
@@ -178,7 +182,7 @@ th,td {
 
 tr:nth-child(even) {
   /* Makes the table look in a pattern of white and grey. */
-  background-color: #dddddd;
+  background-color: #ddd;
 }
 
 table,th,td {
