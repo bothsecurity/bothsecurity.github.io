@@ -262,3 +262,28 @@ Below is the CSS used for responsive design
   }
 
 }
+
+details {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 75%;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+}
+
+summary:hover {
+  color: #007BFF;
+}
+
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
