@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
   --bg-color: #eee;
@@ -14,7 +14,7 @@ html {
   /* Makes sure all default elements have a font and aligned center */
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
 }
 
@@ -53,7 +53,7 @@ nav a:hover, .page-selected {
   padding: 16px 18px;
   border-radius: 12px;
   filter: invert(1);
-  text-shadow: 0px 0px 25px black;
+  text-shadow: 0 0 25px black;
 }
 
 nav a:focus {
@@ -62,7 +62,7 @@ nav a:focus {
 }
 
 br {
-  /* Break Tag, makes it unselectable */
+  /* Break Tags, makes it unselectable */
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none; 
@@ -71,7 +71,7 @@ br {
 header {
   /* The Header, aka the one with "Cybersecurity" on it */
   color: white;
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0 0 5px black;
   background-image: url("header_img/default.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,10 +91,22 @@ header h1 {
   /* Original a tag, without it looking like a button. */
   text-decoration: underline;
   color: blue;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   background-color: transparent;
-  border-radius: 0px;
+  border-radius: 0;
+}
+
+.breadcrumb * {
+  /* The breadcrumb, like the one that says main/page */
+  margin: 0;
+  display: inline;
+  font-family: monospace;
+}
+
+.breadcrumb p, .breadcrumb .link {
+  /* Makes the Children of the Breadcrumb look bigger */
+  font-size: 2.6em;
 }
 
 a { 
@@ -113,7 +125,7 @@ a:hover {
   transform: translateY(10px);
   transform: scale(1.1);
   transition: 0.5s;
-  padding: 24px 32px;
+  padding: 16px 20px;
   font-weight: bold;
 }
 
@@ -138,7 +150,7 @@ main .antivinfo img {
 
 p {
   /* Makes the paragraphs not stretch out, and make them much closer */
-  margin: 0px 500px;
+  margin: 0 25vw;
   font-size: 1.3em;
 }
 
@@ -150,7 +162,7 @@ code {
   border-radius: 6px;
   border: 5px solid #777;
   color: white;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 button {
@@ -160,7 +172,7 @@ button {
   color: white;
   border-radius: 12px;
   padding: 12px 16px;
-  margin: 0px 12px;
+  margin: 0 12px;
   border: none;
   background-color: #0d6efd;
 }
@@ -193,28 +205,33 @@ table,th,td {
 }
 
 .card-container {
+  /* Card Container, has Cards in it */
   display: flex; 
   justify-content: space-around;
-  margin: 0px 50px;
+  margin: 0 50px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* The Single Card, like the Password Security one in the Main Page */
   transition: 0.3s;
   width: 250px;
   height: 400px;
   border-radius: 12px;
+  border: 2px solid rgba(0,0,0,0.15);
   padding: 10px;
 }
 
 .card:hover {
-  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+  /* Style will apply when the Card is hovered */
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.5);
+  background-color: #ddd;
   transition: 0.3s;
   width: 275px;
   height: 440px;
 }
 
 .card img {
+  /* Card Images */
   width: 250px;
   height: 250px;
   border-radius: 12px;
@@ -223,8 +240,38 @@ table,th,td {
 }
 
 .card p {
-  margin: 0px 0px;
+  /* The Text in the Card */
+  margin: 0;
   font-size: 1em;
+}
+
+details {
+  /* a part of the Accordion */
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 75%;
+}
+
+summary {
+  /* The Text in a Accordion */
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+}
+
+summary:hover {
+  /* Applies when you hover over The Text */
+  color: #007BFF;
+}
+
+.contents {
+  /* The Content after you click on it */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*
@@ -234,7 +281,7 @@ Below is the CSS used for responsive design
 
 @media screen and (max-width: 1200px) {
   p {
-    margin: 0px 0px;
+    margin: 0 0;
   }
 
   header>h1 {
