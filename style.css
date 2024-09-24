@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
   --bg-color: #eee;
@@ -14,7 +14,7 @@ html {
   /* Makes sure all default elements have a font and aligned center */
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
 }
 
@@ -95,6 +95,18 @@ header h1 {
   margin: 0;
   background-color: transparent;
   border-radius: 0;
+}
+
+.breadcrumb * {
+  /* The breadcrumb, like the one that says main/page */
+  margin: 0;
+  display: inline;
+  font-family: monospace;
+}
+
+.breadcrumb p, .breadcrumb .link {
+  /* Makes the Children of the Breadcrumb look bigger */
+  font-size: 2.6em;
 }
 
 a { 
@@ -193,12 +205,14 @@ table,th,td {
 }
 
 .card-container {
+  /* Card Container, has Cards in it */
   display: flex; 
   justify-content: space-around;
   margin: 0 50px;
 }
 
 .card {
+  /* The Single Card, like the Password Security one in the Main Page */
   transition: 0.3s;
   width: 250px;
   height: 400px;
@@ -208,6 +222,7 @@ table,th,td {
 }
 
 .card:hover {
+  /* Style will apply when the Card is hovered */
   box-shadow: 0 16px 32px 0 rgba(0,0,0,0.5);
   background-color: #ddd;
   transition: 0.3s;
@@ -216,6 +231,7 @@ table,th,td {
 }
 
 .card img {
+  /* Card Images */
   width: 250px;
   height: 250px;
   border-radius: 12px;
@@ -224,8 +240,38 @@ table,th,td {
 }
 
 .card p {
-  margin: 0 0;
+  /* The Text in the Card */
+  margin: 0;
   font-size: 1em;
+}
+
+details {
+  /* a part of the Accordion */
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 75%;
+}
+
+summary {
+  /* The Text in a Accordion */
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+}
+
+summary:hover {
+  /* Applies when you hover over The Text */
+  color: #007BFF;
+}
+
+.contents {
+  /* The Content after you click on it */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*
