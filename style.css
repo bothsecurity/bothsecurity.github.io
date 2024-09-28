@@ -206,9 +206,10 @@ table,th,td {
 
 .card-container {
   /* Card Container, has Cards in it */
-  display: flex; 
+  display: grid; 
   justify-content: space-around;
   margin: 0 50px;
+  grid-template-columns: auto auto auto;
 }
 
 .card {
@@ -290,7 +291,7 @@ Below is the CSS used for responsive design
 
   .card-container {
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: auto;
   }
 }
 
