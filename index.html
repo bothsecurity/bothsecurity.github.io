@@ -13,18 +13,18 @@
 <body>
   <div class="bg-part">
     <nav>
-      <a id="icon" href="index.html">
+      <a href="index.html" id="icon">
         <img src="icons/shield.svg">
       </a>
       <div class="adiv">
         <a href="about.html">About</a>
-        <a href="index.html#securitytopic">Security Topics</a>
-        <a href="index.html#fun">Fun</a>
+        <a href="index.html#securitytopic" id="topicele">Security Topics</a>
+        <a href="index.html#fun" id="funele">Fun</a>
         <a href="contact.html">Contact Me</a>
       </div>
     </nav>
     <header>
-      <br><br>
+      <br><br><br><br>
       <h1>Cybersecurity</h1>
       <br><br>
       <h3>Keeping yourself safe online</h3>
@@ -138,6 +138,23 @@
     </div>
   </main>
   <br><br><br><br>
+  <script>
+    const navbar_items = document.querySelector('.adiv');
+    const mainele = document.querySelector('main');
+    const icon = document.querySelector('#icon');
+    function toggleNavbarColor() {
+      const rect = mainele.getBoundingClientRect();
+      const isInView = rect.top <= 0 && rect.bottom >= 0;
+      if (isInView) {
+        navbar_items.classList.add('invert');
+        icon.classList.add('icon_invert');
+      } else {
+        navbar_items.classList.remove('invert');
+        icon.classList.remove('icon_invert');
+      }
+    }
+    window.addEventListener('scroll', toggleNavbarColor);
+  </script>
 </body>
 
 </html>

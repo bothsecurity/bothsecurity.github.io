@@ -39,33 +39,42 @@ body > div:first-child {
   background-position: center;
 }
 
-nav {
+.bg-part > nav {
   /* The navigation bar itself */
   display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
+  width: 100%;
+  position: fixed;
   padding: 10px;
   overflow: hidden;
 }
 
-nav #icon img {
-  /* The image of the icon in the navigation bar */
-  width: 45px;
-  filter: invert(1);
+.icon_invert {
+  /* Used from the JS code to make the shield change color */
+  transition: 500ms;
+  filter: none;
   float: left;
 }
 
 nav #icon {
   /* The icon in the navigation bar */
   float: left;
+  filter: invert(1);
+}
+
+nav #icon img {
+  /* The image of the icon in the navigation bar */
+  transition: 500ms;
+  width: 45px;
 }
 
 nav a {
   /* li is the list, and a is the buttons. */
-  float: right;
   transition: 500ms;
+  float: right;
   padding: 25px 30px;
   color: white;
   font-weight: bold;
@@ -89,6 +98,13 @@ nav a:focus {
   /* CSS when the button is focused, like clicked */
   transition: 500ms;
   display: none;
+}
+
+.adiv.invert a {
+  /* The CSS that appears in the JS code, to make the navbar black whenever you scroll somewhere else */
+  transition: 500ms;
+  color: black;
+  text-shadow: 0 0 10px white;
 }
 
 br {
@@ -242,6 +258,7 @@ td {
   transition: 0.3s;
   width: 250px;
   height: 400px;
+  margin: 50px 50px;
   border-radius: 12px;
   border: 2px solid rgba(0, 0, 0, 0.15);
   padding: 10px;
