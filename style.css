@@ -52,17 +52,9 @@ body > div:first-child {
   overflow: hidden;
 }
 
-.icon_invert {
-  /* Used from the JS code to make the shield change color */
-  transition: 500ms;
-  filter: none;
-  float: left;
-}
-
 nav #icon {
   /* The icon in the navigation bar */
   float: left;
-  filter: invert(1);
 }
 
 nav #icon img {
