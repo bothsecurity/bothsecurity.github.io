@@ -329,7 +329,7 @@ Below is the CSS used for responsive design
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
   header>h1 {
     font-size: 35px;
   }
@@ -340,6 +340,10 @@ Below is the CSS used for responsive design
 
   .adiv {
     display: flex;
+  }
+
+  #topicele, #funele {
+    display: none;
   }
 
 }
