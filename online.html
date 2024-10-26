@@ -118,23 +118,7 @@
     </div>
   </main>
   <br><br><br><br>
-  <script>
-    const navbar_items = document.querySelector('.adiv');
-    const mainele = document.querySelector('main');
-    const icon = document.querySelector('#icon > img');
-    function toggleNavbarColor() {
-      const rect = mainele.getBoundingClientRect();
-      const isInView = rect.top <= 0 && rect.bottom >= 0;
-      if (isInView) {
-        navbar_items.classList.add('invert');
-        icon.style.filter = 'invert(0)';
-      } else {
-        navbar_items.classList.remove('invert');
-        icon.style.filter = 'invert(1)';
-      }
-    }
-    window.addEventListener('scroll', toggleNavbarColor);
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
