@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.cardss {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .video-containerss {
+    width: 100%;
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-content h2 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .card-content p {
+    font-size: 0.9em;
+    color: #555;
+  }
+
+
+  <div class="cardss">
+  <div class="video-containerss">
+    <video controls>
+      <source src="vid/Every Type of Computer Virus Explained in 8 Minutes.mp4" type="video/mp4" height="200" weight="100">
+      <p>Every Type of Computer Virus Explained</p>
+    </video>
+  </div>
+  <div class="card-content">
+    <h2>Video Title</h2>
+    <p>This is a description for the video in the card.</p>
+  </div>
+</div>

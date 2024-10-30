@@ -258,6 +258,44 @@ td {
   padding: 10px;
 }
 
+.cardss {
+  background-color: white;
+  width: 250px;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  object-fit: cover;
+}
+.card-containerss {
+  /* Card Container, has Cards in it */
+  display: flex;
+  justify-content: space-around;
+  margin: 0 50px;
+  grid-template-columns: auto auto auto;
+  
+}
+
+.video-containerss {
+  width: 100%;
+  height: auto;
+
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
 .card:hover {
   /* Style will apply when the Card is hovered */
   box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.5);
