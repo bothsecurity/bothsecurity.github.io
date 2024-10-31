@@ -18,76 +18,121 @@ html {
   text-align: center;
 }
 
+h1, h2, h3, h4, p {
+  animation: fadeIn 1s;
+}
+
+p i {
+  /* Targets some text with an italic font */
+  color: #aaa;
+  font-size: 0.7em;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(100px);}
+  100% { opacity: 1; }
+}
+
 /* 
-Above are some default CSS that is supposed to apply for every page.
+Above are some general CSS,
 Below are the CSS defined for various pages.
 */
 
-nav {
-  /* The navigation bar itself */
-  display: block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 10px;
-  overflow: hidden;
-  background-color: #0d6efd;
-}
-
-nav a {
-  /* li is the list, and a is the buttons. */
-  float: right;
-  padding: 14px 16px;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-nav a:hover, .page-selected {
-  /* .page-selected is used to make a button have the hover css but its when they are on the page
-  Example: if you are at the contact me page, you will see the contact me button with the hover css */
-  /* CSS that applies when button is hovered */
-  transition: 500ms;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 16px 18px;
-  border-radius: 12px;
-  filter: invert(1);
-  text-shadow: 0 0 25px black;
-}
-
-nav a:focus {
-  /* CSS when the button is focused, like clicked */
-  display: none;
-}
-
-br {
-  /* Break Tags, makes it unselectable */
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none; 
-}
-
-header {
-  /* The Header, aka the one with "Cybersecurity" on it */
-  color: white;
-  text-shadow: 0 0 5px black;
+body > div:first-child {
   background-image: url("header_img/default.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.bg-part > nav {
+  /* The navigation bar itself */
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  padding: 10px;
+  overflow: hidden;
+}
+
+nav #icon {
+  /* The icon in the navigation bar */
+  float: left;
+}
+
+nav #icon img {
+  /* The image of the icon in the navigation bar */
+  transition: 500ms;
+  width: 45px;
+  filter: invert(1);
+}
+
+nav a {
+  /* li is the list, and a is the buttons. */
+  transition: 500ms;
+  float: right;
+  padding: 25px 30px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0;
+  border-radius: 12px;
+  background-color: transparent;
+  text-shadow: 0 0 25px black;
+}
+
+.adiv a:hover {
+  /* .page-selected is used to make a button have the hover css but its when they are on the page
+  Example: if you are at the contact me page, you will see the contact me button with the hover css */
+  /* CSS that applies when button is hovered */
+  transition: 500ms;
+  text-shadow: 0 0 25px black;
+  color: blue;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.adiv a:focus {
+  /* CSS when the button is focused, like clicked */
+  transition: 500ms;
+  display: none;
+}
+
+.adiv.invert a {
+  /* The CSS that appears in the JS code, to make the navbar black whenever you scroll somewhere else */
+  transition: 500ms;
+  color: black;
+  text-shadow: 0 0 10px white;
+}
+
+.adiv.invert a:hover {
+  /* The CSS that appears in the JS code, to make the navbar black whenever you scroll somewhere else */
+  transition: 500ms;
+  color: blue;
+  text-shadow: 0 0 10px white;
+}
+
+br {
+  /* Break Tags, makes it unselectable */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+header {
+  /* The Header, aka the one with "Cybersecurity" on it */
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
 header h1 {
   font-size: 6em;
 }
 
-#icon {
-  padding: 5px 5px;
-  float: left;
-}
-
-.link { 
+.link {
   /* Original a tag, without it looking like a button. */
   text-decoration: underline;
   color: blue;
@@ -104,12 +149,13 @@ header h1 {
   font-family: monospace;
 }
 
-.breadcrumb p, .breadcrumb .link {
+.breadcrumb p,
+.breadcrumb .link {
   /* Makes the Children of the Breadcrumb look bigger */
   font-size: 2.6em;
 }
 
-a { 
+a {
   /* Gets all other a tags except the navigation bar */
   transition: 0.5s;
   text-decoration: none;
@@ -187,17 +233,20 @@ button:hover {
   font-weight: bold;
 }
 
-th,td {
+th,
+td {
   /* Get the table row & table data */
   padding: 5px;
-} 
+}
 
 tr:nth-child(even) {
   /* Makes the table look in a pattern of white and grey. */
   background-color: #ddd;
 }
 
-table,th,td {
+table,
+th,
+td {
   /* CSS that applies for table, table row & table data */
   margin: 0 auto;
   border: 1px solid black;
@@ -206,24 +255,26 @@ table,th,td {
 
 .card-container {
   /* Card Container, has Cards in it */
-  display: flex; 
+  display: grid;
   justify-content: space-around;
   margin: 0 50px;
+  grid-template-columns: auto auto auto;
 }
 
 .card {
-  /* The Single Card, like the Password Security one in the Main Page */
+  /* Card is the little card you see in the homepage, like the "History" card */
   transition: 0.3s;
   width: 250px;
   height: 400px;
+  margin: 50px 50px;
   border-radius: 12px;
-  border: 2px solid rgba(0,0,0,0.15);
+  border: 2px solid rgba(0, 0, 0, 0.15);
   padding: 10px;
 }
 
 .card:hover {
   /* Style will apply when the Card is hovered */
-  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.5);
   background-color: #ddd;
   transition: 0.3s;
   width: 275px;
@@ -239,10 +290,30 @@ table,th,td {
   object-position: right;
 }
 
-.card p {
+.card p, .vidcard p {
   /* The Text in the Card */
   margin: 0;
   font-size: 1em;
+}
+
+.vidcard {
+  /* Vidcard is a special card for the resources.html, to display videos */ 
+  transition: 0.3s;
+  width: 400px;
+  height: 420px;
+  margin: 50px 50px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 5px;
+}
+
+.vidcard iframe {
+  /* Card iframes, for the youtube video embed */
+  height: 250px;
+  width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: right;
 }
 
 details {
@@ -290,11 +361,11 @@ Below is the CSS used for responsive design
 
   .card-container {
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: auto;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
   header>h1 {
     font-size: 35px;
   }
@@ -305,6 +376,10 @@ Below is the CSS used for responsive design
 
   .adiv {
     display: flex;
+  }
+
+  #topicele, #funele {
+    display: none;
   }
 
 }

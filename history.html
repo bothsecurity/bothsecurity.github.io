@@ -12,28 +12,28 @@
 </head>
 
 <body>
-  <nav>
-    <a id="icon" href="index.html">
-      <img src="icons/shield.svg" width=45>
-    </a>
-    <div class="adiv">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact Me</a>
-    </div>
-  </nav>
-  <header style="background-image: url('header_img/history.png')">
-    <br><br><br><br>
-    <h1>History</h1>
-    <br><br>
-    <h3>Where it began</h3>
-    <br><br><br><br>
-  </header>
+  <div class="bg-part" style="background-image: url('header_img/history.png')">
+    <nav>
+      <a href="index.html" id="icon">
+        <img src="icons/shield.svg">
+      </a>
+      <div class="adiv">
+        <a href="about.html">About</a>
+        <a href="index.html#securitytopic" id="topicele">Security Topics</a>
+        <a href="index.html#fun" id="funele">Fun</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </nav>
+    <header>
+      <br><br><br><br>
+      <h1>History</h1>
+      <br><br>
+      <h3>Where it began</h3>
+      <br><br><br><br>
+    </header>
+  </div>
   <br><br><br><br>
   <main>
-    <div class="breadcrumb">
-      <a class="link" href="index.html">main</a><p>/history</p>
-    </div>
-    <br><br>
     <a href="index.html"><i class="bi bi-house-fill"></i> Home</a>
     <br><br><br><br>
     <p>Welcome to <b>History</b>, this page will be talking about what was the first malware, what were the largest
@@ -46,8 +46,7 @@
         <div class="content">
           <h2>1971</h2>
           <br>
-          <img
-            src="https://www.lifewire.com/thmb/fKZH2A9tE5c42VxD8TZVd985adc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/minecraftcreeper-c2dbea5157ab46a592fc825a0c3b5bb3.jpg">
+          <img src="https://www.lifewire.com/thmb/fKZH2A9tE5c42VxD8TZVd985adc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/minecraftcreeper-c2dbea5157ab46a592fc825a0c3b5bb3.jpg">
           <h2><i class="bi bi-virus2"></i> First Virus & Antivirus</h2>
           <br>
           <p>The First Malware, known as <b>"Creeper"</b> <em>(not the one from Minecraft)</em> appeared in the early
@@ -234,6 +233,7 @@
     </div>
   </main>
   <br><br><br><br>
+  <script src="script.js"></script>
 </body>
 
 </html>
