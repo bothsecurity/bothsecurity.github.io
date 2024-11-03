@@ -8,24 +8,18 @@ html {
   /* Main HTML CSS */
   background: var(--bg-color);
   color: black;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
 }
 
 * {
   /* Makes sure all default elements have a font and aligned center */
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu", sans-serif;
-  text-align: center;
 }
 
 h1, h2, h3, h4, p {
   animation: fadeIn 1s;
-}
-
-p i {
-  /* Targets some text with an italic font */
-  color: #aaa;
-  font-size: 0.7em;
 }
 
 @keyframes fadeIn {
@@ -200,13 +194,20 @@ p {
   font-size: 1.3em;
 }
 
+p i, p em {
+  /* Targets some text with an italic font */
+  color: #aaa;
+  font-size: 0.7em;
+}
+
 code {
   /* This is used for stuff like Password Generator, and the email info */
   font-family: monospace;
   font-size: 200%;
-  background-color: #777;
+  background-color: #555;
+  width: max-content;
   border-radius: 6px;
-  border: 5px solid #777;
+  border: 3px solid #555;
   color: white;
   margin: 0 auto;
 }
@@ -294,6 +295,41 @@ td {
   /* The Text in the Card */
   margin: 0;
   font-size: 1em;
+}
+
+footer {
+  /* The footer, the bottom of the page */
+  background-color: slateblue;
+  display: flex; 
+  justify-content: space-around;
+}
+
+footer > div {
+  /* The sections in the footer */
+  padding: 20px;
+  text-align: left;
+  width: 500px;
+}
+
+footer > div > * {
+  /* The Text in the footer */
+  margin: 0;
+  color: white;
+}
+
+footer > div > p {
+  /* The Text in the footer */
+  margin: 0;
+  font-size: 1em;
+  color: white;
+}
+
+footer > div > code {
+  /* The Text in the footer */
+  margin: 0;
+  font-size: 1em;
+  color: white;
+  display: block;
 }
 
 .vidcard {
