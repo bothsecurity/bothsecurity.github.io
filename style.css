@@ -22,13 +22,19 @@ h1, h2, h3, h4, p {
   animation: fadeIn 1s;
 }
 
+p i {
+  /* Targets some text with an italic font */
+  color: #aaa;
+  font-size: 0.7em;
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(100px);}
   100% { opacity: 1; }
 }
 
 /* 
-Above are some default CSS that is supposed to apply for every page.
+Above are some general CSS,
 Below are the CSS defined for various pages.
 */
 
@@ -78,17 +84,18 @@ nav a {
   text-shadow: 0 0 25px black;
 }
 
-nav a:hover {
+.adiv a:hover {
   /* .page-selected is used to make a button have the hover css but its when they are on the page
   Example: if you are at the contact me page, you will see the contact me button with the hover css */
   /* CSS that applies when button is hovered */
   transition: 500ms;
-  padding: 25px 30px;
   text-shadow: 0 0 25px black;
   color: blue;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
-nav a:focus {
+.adiv a:focus {
   /* CSS when the button is focused, like clicked */
   transition: 500ms;
   display: none;
@@ -98,6 +105,13 @@ nav a:focus {
   /* The CSS that appears in the JS code, to make the navbar black whenever you scroll somewhere else */
   transition: 500ms;
   color: black;
+  text-shadow: 0 0 10px white;
+}
+
+.adiv.invert a:hover {
+  /* The CSS that appears in the JS code, to make the navbar black whenever you scroll somewhere else */
+  transition: 500ms;
+  color: blue;
   text-shadow: 0 0 10px white;
 }
 
@@ -248,7 +262,7 @@ td {
 }
 
 .card {
-  /* The Single Card, like the Password Security one in the Main Page */
+  /* Card is the little card you see in the homepage, like the "History" card */
   transition: 0.3s;
   width: 250px;
   height: 400px;
@@ -314,10 +328,30 @@ video {
   object-position: right;
 }
 
-.card p {
+.card p, .vidcard p {
   /* The Text in the Card */
   margin: 0;
   font-size: 1em;
+}
+
+.vidcard {
+  /* Vidcard is a special card for the resources.html, to display videos */ 
+  transition: 0.3s;
+  width: 400px;
+  height: 420px;
+  margin: 50px 50px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 5px;
+}
+
+.vidcard iframe {
+  /* Card iframes, for the youtube video embed */
+  height: 250px;
+  width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: right;
 }
 
 details {
