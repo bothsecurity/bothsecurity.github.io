@@ -335,8 +335,8 @@ footer > div > code {
 .vidcard {
   /* Vidcard is a special card for the resources.html, to display videos */ 
   transition: 0.3s;
-  width: 400px;
-  height: 420px;
+  width: 350px;
+  height: 400px;
   margin: 50px 50px;
   border-radius: 12px;
   border: 2px solid rgba(0, 0, 0, 0.15);
@@ -345,8 +345,8 @@ footer > div > code {
 
 .vidcard iframe {
   /* Card iframes, for the youtube video embed */
-  height: 250px;
-  width: 400px;
+  height: 200px;
+  width: 320px;
   border-radius: 12px;
   object-fit: cover;
   object-position: right;
